@@ -11,6 +11,7 @@
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
         }
         .container {
             text-align: center;
@@ -32,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="245559571_114695031010565_6872366304943858195_n.jpg" alt="Logo" width="100">
+        <img src="path-to-your-logo.jpg" alt="Logo" width="100">
         <h1>KAMALAYSAYAN</h1>
         <button onclick="generateQRCode()">Generate QR Code</button>
     </div>
@@ -46,7 +47,7 @@
         function generateQRCode() {
             const qr = new QRious({
                 element: document.getElementById('qrCode'),
-                value: 'file:///C:/Users/Admin/OneDrive/Downloads/dito%20kayo/kamalay_2025.html',
+                value: 'https://github.com/Kamalaysayan/Seredate2025', // Replace with your actual URL
                 size: 200
             });
             document.getElementById('qrContainer').style.display = 'block';
