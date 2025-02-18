@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            text-align: center;
+        }
+        .qr-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #qrCode {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="path-to-your-logo.jpg" alt="Logo" width="100">
+        <h1>KAMALAYSAYAN</h1>
+        <button onclick="generateQRCode()">Generate QR Code</button>
+    </div>
+    <div class="qr-container" id="qrContainer">
+        <div id="qrCode"></div>
+        <p>Thank you</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        function generateQRCode() {
+            const qr = new QRious({
+                element: document.getElementById('qrCode'),
+                value: 'https://github.com/Kamalaysayan/Seredate2025', // Replace with your actual URL
+                size: 200
+            });
+            document.getElementById('qrContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
